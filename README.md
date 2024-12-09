@@ -3,7 +3,7 @@
 1、进入官网，控制中心，虚拟私有云
 2、创建私有云（默认就好）vpc-server   2、创建一个子网subnet-server  
 3、创建安全组（控制访问下） 
-模板选择自定义：配置规则，添加规则。一个是ssh的，一个是业务端口
+模板选择自定义：配置规则，添加规则。一个是ssh的（查看自己电脑ip），一个是业务端口
 ![图片1](https://github.com/user-attachments/assets/13a002c9-5c01-49fc-9eb8-12475c4d0667)  
 设置出方向规则
 ![图片2](https://github.com/user-attachments/assets/e127b863-8f8d-40ff-994a-2fa1f76d0ed6)  
@@ -11,7 +11,7 @@
 ![image](https://github.com/user-attachments/assets/4bbd9b7b-1e00-447f-931b-912eb8ddb763)  
 5、开弹性云主机  
 控制中心，弹性云主机->按量计费，随机分配，ecm--config，2核4gb通用型s7，Ubuntu，关闭主机安全防护  
-![image](https://github.com/user-attachments/assets/b72073b6-a5af-4608-b507-295984dfae02)
+![image](https://github.com/user-attachments/assets/b72073b6-a5af-4608-b507-295984dfae02)  
 网络配置：网卡、安全组、弹性ip使用已有->密码，ybh@200001130  账号是root  
 ![image](https://github.com/user-attachments/assets/17bbbc53-e3b3-437e-be60-1b731297f07b)  
 购买、开通（费用中心，我的订单、控制台），在弹性云主机页面等待开通  
