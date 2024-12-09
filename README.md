@@ -81,7 +81,7 @@ WantedBy=multi-user.target
 在弹性伸缩组处，  修改，期望实例数2  
 ![image](https://github.com/user-attachments/assets/ac69dda5-ac4b-41b0-8b4d-ff6a612dcac0)  
 之后等待负载均衡上线，负载均衡--后端主机组  弹性云主机处就有三个了  
-![image](https://github.com/user-attachments/assets/8c176d15-aa9e-41e6-9bf1-bf581e568385)
+![image](https://github.com/user-attachments/assets/8c176d15-aa9e-41e6-9bf1-bf581e568385)  
 将http://ip:7000提交
 
 
