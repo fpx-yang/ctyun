@@ -27,6 +27,19 @@ vi config.json(将例子复制进来)  按i进入插入模式，输入,按esc进
 ./app-server1-demo start -config config.json  
 ![image](https://github.com/user-attachments/assets/a308be1f-9258-4692-ba3d-d07103bd3da5)  
 可以接收请求了 
+9、测试  
+复制公网ip，浏览器ip:7000  
+![image](https://github.com/user-attachments/assets/ec4ce1aa-5477-4443-9638-7b26e5886c1b)  
+ip:7000/calc?input=222    curl http://ip:7000/calc?input=222
+![image](https://github.com/user-attachments/assets/d0121bed-928e-41a6-bd74-3c01f7fa5a0a)   
+![image](https://github.com/user-attachments/assets/c5e34220-e606-453b-9738-7316398447e9)  
+10、制作自启动  
+cd /      先尝试启动 /opt/app-server1-demo start -config /opt/config.json  
+vi /etc/systemd/system/app-server.service  
+![image](https://github.com/user-attachments/assets/4dead811-03ce-40be-9037-c1a467e64f07)  
+esc  :wq->systemctl start app-server->systemctl status app-server->systemctl enable app-server  
+systemctl daemon-reload 之后可以reboot,也可以不用  
+  
 [Unit]  
 Description=app-server1  
 After=network-online.target  
@@ -45,20 +58,9 @@ StandError=inherit
 WantedBy=multi-user.target  
 
 /etc/systemd/system/app-server.service  
+  
 
 
-9、测试  
-复制公网ip，浏览器ip:7000  
-![image](https://github.com/user-attachments/assets/ec4ce1aa-5477-4443-9638-7b26e5886c1b)  
-ip:7000/calc?input=222    curl http://ip:7000/calc?input=222
-![image](https://github.com/user-attachments/assets/d0121bed-928e-41a6-bd74-3c01f7fa5a0a)   
-![image](https://github.com/user-attachments/assets/c5e34220-e606-453b-9738-7316398447e9)  
-10、制作自启动  
-cd /      先尝试启动 /opt/app-server1-demo start -config /opt/config.json  
-vi /etc/systemd/system/app-server.service  
-![image](https://github.com/user-attachments/assets/4dead811-03ce-40be-9037-c1a467e64f07)  
-esc  :wq->systemctl start app-server->systemctl status app-server->systemctl enable app-server  
-systemctl daemon-reload 之后可以reboot,也可以不用  
 11、设置弹性负载均衡器  
 虚拟私有云的界面，弹性负载均衡，经典型、外网，购买->点入弹性负载均衡器，添加监听器，tcp 7000  
 ![image](https://github.com/user-attachments/assets/ee248672-2d6f-4071-b050-36652bb812aa)  
