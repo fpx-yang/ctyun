@@ -71,10 +71,15 @@ WantedBy=multi-user.target
 ![image](https://github.com/user-attachments/assets/76109fed-7010-434b-87cb-fe7d0d95b847)  
 不需要改什么，之后在镜像服务、私有镜像看到正常运行  
 ![image](https://github.com/user-attachments/assets/10602a46-5ef2-4154-aa77-125a5604462b)  
-13、弹性伸缩，伸缩配置  
+13、弹性伸缩，伸缩配置  创建 as-app-server  
 可用区都选上，通用型，s7，large.2  2c4g的，私有镜像，弹性ip不使用，密码ybh@200001130  
-均衡分布，负载均衡启用（后端端口7000，权重100），创建  在弹性伸缩组处，修改，期望实例数2
-之后等待负载均衡上线，负载均衡--后端主机组  
+之后创建弹性伸缩组 as-group-app-server  
+均衡分布，负载均衡启用（后端端口7000，权重100），创建  在弹性伸缩组处，  
+![image](https://github.com/user-attachments/assets/d8ec77ad-ac71-4208-b6c9-bce653928b7b)  
+修改，期望实例数2
+![image](https://github.com/user-attachments/assets/729c5517-9d81-412f-878e-f21e5b91b2e0)  
+之后等待负载均衡上线，负载均衡--后端主机组  弹性云主机处就有三个了  
+![image](https://github.com/user-attachments/assets/8c176d15-aa9e-41e6-9bf1-bf581e568385)
 将http://ip:7000提交
 
 
