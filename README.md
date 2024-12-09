@@ -85,14 +85,20 @@ WantedBy=multi-user.target
 
 ## 数据库  
 1、进入  弹性云主机左上角方框，数据库--关系数据库PostgreSQL版，创建实例  
-![image](https://github.com/user-attachments/assets/9415cd62-8372-4a5c-943f-8885b7de2404)
+![image](https://github.com/user-attachments/assets/9415cd62-8372-4a5c-943f-8885b7de2404)  
+![image](https://github.com/user-attachments/assets/5d4b4c36-e832-45df-bd18-2acf760f559c)  
 网络内选就好，安全组新建一个(端口号6543)，配置规则  
 ![image](https://github.com/user-attachments/assets/7a8f9755-1fdf-4ebe-9cea-24be1237a72d)  
-![image](https://github.com/user-attachments/assets/a54af002-c84a-4357-8138-ffb6ef326ffa)  
+![image](https://github.com/user-attachments/assets/a54af002-c84a-4357-8138-ffb6ef326ffa)   
+中间到了安全组就新建一个  
 ![image](https://github.com/user-attachments/assets/1ee11a14-fc55-42e2-ae87-1d5f9db20196)  
-在订单中查看开通情况，之后再pSQL下实例管理里，运行中，点进去  
-![image](https://github.com/user-attachments/assets/ddc57d51-bcd9-4c73-a9f8-fa05c00aef0c)  
-数据库管理--创建数据库：testdb 回到cmd    apt install postgresql-client  
+在订单中查看开通情况，之后再pSQL下实例管理里，运行中，点进去（内网ip复制记录好）  
+![image](https://github.com/user-attachments/assets/ddc57d51-bcd9-4c73-a9f8-fa05c00aef0c) 
+查看数据库端口，可能需要返回安全组修改  
+![image](https://github.com/user-attachments/assets/b7a0e4b2-ab24-4b39-b150-d1e002725672)  
+数据库管理--创建数据库：testdb 
+![image](https://github.com/user-attachments/assets/91a359f8-378f-480c-8d8a-9e83a700026c)  
+回到cmd    apt install postgresql-client  
 ![image](https://github.com/user-attachments/assets/6322f7e0-accc-4088-86d0-bbe8b6f9b802)  
 回到浏览器实例管理，复制内网ip  登录 psql -h ip -U root -W testdb  
 ![image](https://github.com/user-attachments/assets/6ee75044-2306-4934-9ffe-1af9f3b1621a)  
@@ -107,11 +113,21 @@ WantedBy=multi-user.target
 ## 对象存储
 控制台主页，存储--对象存储，点击下边的bucket进入文件管理  
 点击上传文件，上传一个写好的txt尝试，选文件后边的更多--设置读写权限，公共读  
+![image](https://github.com/user-attachments/assets/23fae5c9-f3ac-425c-bb07-8ee4db29ac2a)  
 读写权限私有，就可以生成分析链接，用curl ‘链接’就可以获取权限  
 也可以用python  ->pip install boto3  ->写一个python文件 s3-test  
-对象存储界面，access key管理，复制两个key；对象存储界面 域名信息复制终端节点  
-![image](https://github.com/user-attachments/assets/79d5e5c4-0f9e-4848-8393-231afe802c8c)
-零信任服务  :边缘安全加速平台 ，零信任服务，网络--连接器管理，创建连接器ctyun-test 
+左上角物品栏选择对象存储界面，access key管理，复制两个key；   
+![image](https://github.com/user-attachments/assets/43ab8cb9-3063-4a33-b0c3-fa250469297e)  
+![image](https://github.com/user-attachments/assets/7f4d749e-d8f0-4de2-be6a-36b5a61a01f2)  
+对象存储界面 域名信息复制终端节点  
+![image](https://github.com/user-attachments/assets/4861ef33-c7a7-4fa1-a6ea-32d771f02ae8)  
+![image](https://github.com/user-attachments/assets/4c0a3206-ddb0-4898-acc5-ba2f0bd0ea66)  
+Bucket就是上边的名字，Key是文件名称  
+![image](https://github.com/user-attachments/assets/c86d4f92-8554-4a52-9f8a-bf576bc1d1f1)  
+
+
+## 零信任服务  
+边缘安全加速平台 ，零信任服务，网络--连接器管理，创建连接器ctyun-test 
 ![image](https://github.com/user-attachments/assets/4ac012f6-1989-400b-b599-8c79be9dc3d6)  
 云服务器安装docker   apt install docker.io  
 安装好后，运行指令，完事后网页下一步->应用--应用程序，新增 -> 云服务器 ip a  查看ip  
@@ -122,7 +138,9 @@ WantedBy=multi-user.target
 ![image](https://github.com/user-attachments/assets/60f5b32e-c711-425c-84c9-6667a3ae943b)  
 ![image](https://github.com/user-attachments/assets/6bb12153-95ee-44a9-8647-b8779e23a293)  
 之后回到连接器管理，  
-![Uploading image.png…]()  
+![image](https://github.com/user-attachments/assets/05ac779a-97cc-454f-8dda-2ac353a48c77)  
+
+
 aone零信任 客户端下载  就可以通过之前看到的ip a的地址登录
 
 
