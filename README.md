@@ -139,9 +139,9 @@ Bucket就是上边的名字，Key是文件名称
 
 (应用--应用配置--添加应用 ->  )应用名称 styun-ssh   中等，下一步  
 ![image](https://github.com/user-attachments/assets/ec40c1fc-a510-43c9-b6c5-22a44ac20c0d)  
-选网路应用  ip地址 复制的ip  tcp协议  22端口 集群 
-![image](https://github.com/user-attachments/assets/9d1a906e-64f3-45df-8c17-0eeacbb092fa)  
-![image](https://github.com/user-attachments/assets/72320fac-0024-43ef-b7cf-7dd3e535a85f)  
+选网路应用  ip地址 复制的ip  tcp协议  22端口 集群  
+![image](https://github.com/user-attachments/assets/9d1a906e-64f3-45df-8c17-0eeacbb092fa)   
+![image](https://github.com/user-attachments/assets/72320fac-0024-43ef-b7cf-7dd3e535a85f)    
 之后回到网络--连接器管理，  
 ![image](https://github.com/user-attachments/assets/19b24676-3722-46c9-a3e6-76d757bf1769)  
 换一台电脑 aone零信任 客户端下载   应用--应用配置下看ip（其实就是之前复制的ip）
