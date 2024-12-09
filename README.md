@@ -26,7 +26,27 @@ vi config.json(将例子复制进来)  按i进入插入模式，输入,按esc进
 ![image](https://github.com/user-attachments/assets/7d2bc525-e252-4df6-a4f8-7aee723da7d2)  
 ./app-server1-demo start -config config.json  
 ![image](https://github.com/user-attachments/assets/a308be1f-9258-4692-ba3d-d07103bd3da5)  
-可以接收请求了  
+可以接收请求了 
+[Unit]  
+Description=app-server1  
+After=network-online.target  
+Wants=network-online.target  
+
+[Service]  
+Type=simple  
+User=root  
+ExecStart=/opt/app-server1-demo start -config /opt/config.json  
+ExecStop=/bin/kill -s QUIT $MAINPID  
+Restart=always  
+StandOutput=syslog  
+StandError=inherit  
+
+[Install]  
+WantedBy=multi-user.target  
+
+/etc/systemd/system/app-server.service  
+
+
 9、测试  
 复制公网ip，浏览器ip:7000  
 ![image](https://github.com/user-attachments/assets/ec4ce1aa-5477-4443-9638-7b26e5886c1b)  
