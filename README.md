@@ -140,20 +140,22 @@ Bucket就是上边的名字，Key是文件名称
 (应用--应用配置--添加应用 ->  )应用名称 styun-ssh   中等，下一步  
 ![image](https://github.com/user-attachments/assets/ec40c1fc-a510-43c9-b6c5-22a44ac20c0d)  
 选网路应用  ip地址 复制的ip  tcp协议  22端口 集群  
-![image](https://github.com/user-attachments/assets/9d1a906e-64f3-45df-8c17-0eeacbb092fa)   
-![image](https://github.com/user-attachments/assets/72320fac-0024-43ef-b7cf-7dd3e535a85f)    
-之后回到网络--连接器管理，  
-![image](https://github.com/user-attachments/assets/19b24676-3722-46c9-a3e6-76d757bf1769)  
-换一台电脑 aone零信任 客户端下载   应用--应用配置下看ip（其实就是之前复制的ip）
-![Uploading image.png…]()  
-安装好aone，就可以通过这个ip访问 ->  aone的用户名是suika，密码是客户端密码  
-netstat -tlunp 查看7000端口起没起来  
-![image](https://github.com/user-attachments/assets/86ee0397-0674-46fe-9368-b98b504d6eb1)
-sgs-face安全组  
-![Uploading image.png…]()  
+![image](https://github.com/user-attachments/assets/cf71c277-09a2-4848-9b31-076414bde4c8)  
+![image](https://github.com/user-attachments/assets/cd7d6133-c6e7-43d0-b836-a5a7b39ddcfc)  
 
-之后回到连接器管理，  
-![image](https://github.com/user-attachments/assets/05ac779a-97cc-454f-8dda-2ac353a48c77)  
+之后回到网络--连接器管理    
+![image](https://github.com/user-attachments/assets/04d07fe2-c023-4645-9f3f-97eb987a100c)  
+
+换一台电脑 aone零信任 客户端下载   应用--应用配置下看ip（其实就是之前复制的ip）  
+![image](https://github.com/user-attachments/assets/1c6ce976-5ae8-458c-b1bf-5c58b0c295a6)  
+
+安装好aone，就可以通过这个ip访问 ->  aone的用户名是suika，密码是客户端密码  
+netstat -tlunp 查看7000端口起没起来   
+![image](https://github.com/user-attachments/assets/4dec18f8-6feb-46c9-a49e-6ca2ca8810a4)  
+
+sgs-face安全组  
+![image](https://github.com/user-attachments/assets/3a993195-19ea-45eb-912e-371f8d2c8d98)  
+
 
 
 
