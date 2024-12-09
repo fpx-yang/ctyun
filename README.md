@@ -127,21 +127,34 @@ Bucket就是上边的名字，Key是文件名称
 
 
 ## 零信任服务  
-边缘安全加速平台 ，零信任服务，网络--连接器管理，创建连接器ctyun-test 
+边缘安全加速平台 ，零信任服务，网络--连接器管理，创建连接器ctyun-test，复制docker指令  
 ![image](https://github.com/user-attachments/assets/4ac012f6-1989-400b-b599-8c79be9dc3d6)  
 云服务器安装docker   apt install docker.io  
-安装好后，运行指令，完事后网页下一步->应用--应用程序，新增 -> 云服务器 ip a  查看ip  
-![image](https://github.com/user-attachments/assets/b6abca9d-739a-407f-8397-ccfd21c3cae5)  
+安装好后，运行指令，完事后网页下一步  
 连接器管理：网络--连接器管理，右上角连接器管理  
 ![image](https://github.com/user-attachments/assets/6e20cdbe-4030-4801-88db-40a58b23801a)  
-应用--应用配置--添加应用 ->  应用名称 styun-ssh   中等，下一步  
-![image](https://github.com/user-attachments/assets/60f5b32e-c711-425c-84c9-6667a3ae943b)  
-![image](https://github.com/user-attachments/assets/6bb12153-95ee-44a9-8647-b8779e23a293)  
+新增 -> 应用--应用配置--添加应用->云服务器 ip a  查看ip 复制好ip
+![image](https://github.com/user-attachments/assets/5b50b578-fdea-4441-9df7-16f9774e6792)  
+(应用--应用配置--添加应用 ->  )应用名称 styun-ssh   中等，下一步  
+![image](https://github.com/user-attachments/assets/ec40c1fc-a510-43c9-b6c5-22a44ac20c0d)  
+选网路应用  ip地址 复制的ip  tcp协议  22端口 集群 
+![image](https://github.com/user-attachments/assets/9d1a906e-64f3-45df-8c17-0eeacbb092fa)  
+![image](https://github.com/user-attachments/assets/72320fac-0024-43ef-b7cf-7dd3e535a85f)  
+之后回到网络--连接器管理，  
+![image](https://github.com/user-attachments/assets/19b24676-3722-46c9-a3e6-76d757bf1769)  
+换一台电脑 aone零信任 客户端下载   应用--应用配置下看ip（其实就是之前复制的ip）
+![Uploading image.png…]()  
+安装好aone，就可以通过这个ip访问 ->  aone的用户名是suika，密码是客户端密码  
+netstat -tlunp 查看7000端口起没起来  
+![image](https://github.com/user-attachments/assets/86ee0397-0674-46fe-9368-b98b504d6eb1)
+sgs-face安全组  
+![Uploading image.png…]()  
+
 之后回到连接器管理，  
 ![image](https://github.com/user-attachments/assets/05ac779a-97cc-454f-8dda-2ac353a48c77)  
 
 
-aone零信任 客户端下载  就可以通过之前看到的ip a的地址登录
+
 
 
 
