@@ -1,4 +1,4 @@
-# ctyun  
+![image](https://github.com/user-attachments/assets/9739148e-2fd9-4e97-94a6-8329ac006652)# ctyun  
 ## 弹性云主机
 1、进入官网，控制中心，虚拟私有云
 2、创建私有云（默认就好）vpc-server   2、创建一个子网subnet-server  
@@ -62,7 +62,9 @@ WantedBy=multi-user.target
 
 
 11、设置弹性负载均衡器  
-虚拟私有云的界面，弹性负载均衡，经典型、外网，购买->点入弹性负载均衡器，添加监听器，tcp 7000  
+虚拟私有云的界面，弹性负载均衡，经典型、外网，购买  
+![image](https://github.com/user-attachments/assets/281bd286-8aed-458e-bb6c-38e7dd8c8926)  
+点入弹性负载均衡器，添加监听器，tcp 7000  
 ![image](https://github.com/user-attachments/assets/ee248672-2d6f-4071-b050-36652bb812aa)  
 继续添加后端主机  
 ![image](https://github.com/user-attachments/assets/55e375da-3ceb-40f4-934b-a96bc040c33a)  
