@@ -1,4 +1,4 @@
-# ctyun
+![image](https://github.com/user-attachments/assets/1cd91301-9d1a-4dc5-91b4-4870bf73d36b)# ctyun  
 ## 弹性云主机
 1、进入官网，控制中心，虚拟私有云
 2、创建私有云（默认就好）
@@ -28,7 +28,8 @@ vi config.json(将例子复制进来)  按i进入插入模式，输入,按esc进
 复制公网ip，浏览器ip:7000  
 ![image](https://github.com/user-attachments/assets/ec4ce1aa-5477-4443-9638-7b26e5886c1b)  
 ip:7000/calc?input=222    curl http://ip:7000/calc?input=222
-![image](https://github.com/user-attachments/assets/d0121bed-928e-41a6-bd74-3c01f7fa5a0a)   ![image](https://github.com/user-attachments/assets/c5e34220-e606-453b-9738-7316398447e9)  
+![image](https://github.com/user-attachments/assets/d0121bed-928e-41a6-bd74-3c01f7fa5a0a)   
+![image](https://github.com/user-attachments/assets/c5e34220-e606-453b-9738-7316398447e9)  
 10、制作自启动  
 cd /      先尝试启动 /opt/app-server1-demo start -config /opt/config.json  
 vi /etc/systemd/system/app-server.service  
@@ -50,6 +51,63 @@ systemctl daemon-reload 之后可以reboot,也可以不用
 均衡分布，负载均衡启用（后端端口7000，权重100），创建  在弹性伸缩组处，修改，期望实例数2
 之后等待负载均衡上线，负载均衡--后端主机组  
 将http://ip:7000提交
+
+
+## 数据库  
+1、进入  弹性云主机左上角方框，数据库--关系数据库PostgreSQL版，创建实例  
+![image](https://github.com/user-attachments/assets/9415cd62-8372-4a5c-943f-8885b7de2404)
+网络内选就好，安全组新建一个(端口号6543)，配置规则  
+![image](https://github.com/user-attachments/assets/7a8f9755-1fdf-4ebe-9cea-24be1237a72d)  
+![image](https://github.com/user-attachments/assets/a54af002-c84a-4357-8138-ffb6ef326ffa)  
+![image](https://github.com/user-attachments/assets/1ee11a14-fc55-42e2-ae87-1d5f9db20196)  
+在订单中查看开通情况，之后再pSQL下实例管理里，运行中，点进去  
+![image](https://github.com/user-attachments/assets/ddc57d51-bcd9-4c73-a9f8-fa05c00aef0c)  
+数据库管理--创建数据库：testdb 回到cmd    apt install postgresql-client  
+![image](https://github.com/user-attachments/assets/6322f7e0-accc-4088-86d0-bbe8b6f9b802)  
+回到浏览器实例管理，复制内网ip  登录 psql -h ip -U root -W testdb  
+![image](https://github.com/user-attachments/assets/6ee75044-2306-4934-9ffe-1af9f3b1621a)  
+实例管理里查看数据库端口，去安全组修改，之后  
+![image](https://github.com/user-attachments/assets/9e2a1799-10c9-48a1-8d24-f0e6eaa11819)  
+登录 psql -h ip -p 端口 -U root -W testdb  
+![image](https://github.com/user-attachments/assets/90f0be23-9153-4f6a-9bc2-66be98e76e64)  
+\l 看下列表->\C testdb选择数据库->操作->\q 退出  
+
+
+
+## 对象存储
+控制台主页，存储--对象存储，点击下边的bucket进入文件管理  
+点击上传文件，上传一个写好的txt尝试，选文件后边的更多--设置读写权限，公共读  
+读写权限私有，就可以生成分析链接，用curl ‘链接’就可以获取权限  
+也可以用python  ->pip install boto3  ->写一个python文件 s3-test  
+对象存储界面，access key管理，复制两个key；对象存储界面 域名信息复制终端节点  
+![image](https://github.com/user-attachments/assets/79d5e5c4-0f9e-4848-8393-231afe802c8c)
+零信任服务  :边缘安全加速平台 ，零信任服务，网络--连接器管理，创建连接器ctyun-test 
+![image](https://github.com/user-attachments/assets/4ac012f6-1989-400b-b599-8c79be9dc3d6)  
+云服务器安装docker   apt install docker.io  
+安装好后，运行指令，完事后网页下一步->应用--应用程序，新增 -> 云服务器 ip a  查看ip  
+![image](https://github.com/user-attachments/assets/b6abca9d-739a-407f-8397-ccfd21c3cae5)  
+连接器管理：网络--连接器管理，右上角连接器管理  
+![image](https://github.com/user-attachments/assets/6e20cdbe-4030-4801-88db-40a58b23801a)  
+应用--应用配置--添加应用 ->  应用名称 styun-ssh   中等，下一步  
+![image](https://github.com/user-attachments/assets/60f5b32e-c711-425c-84c9-6667a3ae943b)  
+![image](https://github.com/user-attachments/assets/6bb12153-95ee-44a9-8647-b8779e23a293)  
+之后回到连接器管理，  
+![Uploading image.png…]()  
+aone零信任 客户端下载  就可以通过之前看到的ip a的地址登录
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
