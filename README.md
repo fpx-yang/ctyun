@@ -25,12 +25,12 @@ vi config.json(将例子复制进来)  按i进入插入模式，输入,按esc进
 :wq     vi config.json  
 ![image](https://github.com/user-attachments/assets/7d2bc525-e252-4df6-a4f8-7aee723da7d2)  
 ./app-server1-demo start -config config.json  
-![image](https://github.com/user-attachments/assets/a308be1f-9258-4692-ba3d-d07103bd3da5)  
-可以接收请求了 
+![image](https://github.com/user-attachments/assets/a308be1f-9258-4692-ba3d-d07103bd3da5)    
+可以接收请求了  
 9、测试  
 复制公网ip，浏览器ip:7000  
 ![image](https://github.com/user-attachments/assets/ec4ce1aa-5477-4443-9638-7b26e5886c1b)  
-ip:7000/calc?input=222    curl http://ip:7000/calc?input=222
+ip:7000/calc?input=222    curl http://ip:7000/calc?input=222  
 ![image](https://github.com/user-attachments/assets/d0121bed-928e-41a6-bd74-3c01f7fa5a0a)   
 ![image](https://github.com/user-attachments/assets/c5e34220-e606-453b-9738-7316398447e9)  
 10、制作自启动  
