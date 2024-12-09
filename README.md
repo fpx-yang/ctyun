@@ -39,12 +39,17 @@ systemctl daemon-reload 之后可以reboot,也可以不用
 虚拟私有云的界面，弹性负载均衡，经典型、外网，购买->点入弹性负载均衡器，添加监听器，tcp 7000  
 ![image](https://github.com/user-attachments/assets/ee248672-2d6f-4071-b050-36652bb812aa)  
 继续添加后端主机  
-![Uploading image.png…]()  
+![image](https://github.com/user-attachments/assets/55e375da-3ceb-40f4-934b-a96bc040c33a)  
 7000端口，权重100  访问负载均衡器 ip地址的7000端口  
-
-
-
-
+12、增加  
+![image](https://github.com/user-attachments/assets/76109fed-7010-434b-87cb-fe7d0d95b847)  
+不需要改什么，之后在镜像服务、私有镜像看到正常运行  
+![image](https://github.com/user-attachments/assets/10602a46-5ef2-4154-aa77-125a5604462b)  
+13、弹性伸缩，伸缩配置  
+可用区都选上，通用型，s7，large.2  2c4g的，私有镜像，弹性ip不使用，密码ybh@200001130  
+均衡分布，负载均衡启用（后端端口7000，权重100），创建  在弹性伸缩组处，修改，期望实例数2
+之后等待负载均衡上线，负载均衡--后端主机组  
+将http://ip:7000提交
 
 
 
