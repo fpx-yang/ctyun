@@ -132,9 +132,11 @@ Bucket就是上边的名字，Key是文件名称
 云服务器安装docker   apt install docker.io  
 安装好后，运行指令，完事后网页下一步  
 连接器管理：网络--连接器管理，右上角连接器管理  
-![image](https://github.com/user-attachments/assets/6e20cdbe-4030-4801-88db-40a58b23801a)  
-新增 -> 应用--应用配置--添加应用->云服务器 ip a  查看ip 复制好ip
-![image](https://github.com/user-attachments/assets/5b50b578-fdea-4441-9df7-16f9774e6792)  
+![image](https://github.com/user-attachments/assets/1fe747bc-8302-4d1b-9c16-9fe3b9174dcf)  
+ 
+新增 -> 应用--应用配置--添加应用->云服务器 ip a  查看ip 复制好ip  
+![image](https://github.com/user-attachments/assets/63f193a5-5d63-4cb1-b6e7-4a1629483e82)  
+
 (应用--应用配置--添加应用 ->  )应用名称 styun-ssh   中等，下一步  
 ![image](https://github.com/user-attachments/assets/ec40c1fc-a510-43c9-b6c5-22a44ac20c0d)  
 选网路应用  ip地址 复制的ip  tcp协议  22端口 集群 
