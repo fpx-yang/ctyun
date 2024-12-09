@@ -67,7 +67,7 @@ WantedBy=multi-user.target
 点入弹性负载均衡器，添加监听器，tcp 7000  
 ![image](https://github.com/user-attachments/assets/ee248672-2d6f-4071-b050-36652bb812aa)  
 继续添加后端主机  
-![image](https://github.com/user-attachments/assets/55e375da-3ceb-40f4-934b-a96bc040c33a)  
+![image](https://github.com/user-attachments/assets/e3286216-c131-4db1-ad41-16bf909c3877)  
 7000端口，权重100  访问负载均衡器 ip地址的7000端口  
 12、增加  
 ![image](https://github.com/user-attachments/assets/76109fed-7010-434b-87cb-fe7d0d95b847)  
