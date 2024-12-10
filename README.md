@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9739148e-2fd9-4e97-94a6-8329ac006652)# ctyun  
+# ctyun  
 ## 弹性云主机
 1、进入官网，控制中心，虚拟私有云
 2、创建私有云（默认就好）vpc-server   2、创建一个子网subnet-server  
